@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+ :root {
+    --primaryTextcolor: #232e35; /*untuk title atau judul */
+    --seCondaryTextColor: #656d72; /* untuk text biasa seperti paragraph */
+    --primaryBackgroundColor: blue;
+    --borderColor: #f1f1f1;
+    --lineColor: #d9d9d9;
+    --primaryBackgroundColor: #fff;
+    --secondaryBackgroundColor: #fbfbfb;
+    --thirdBackgroundColor: #f5f3fe;
+    --primaryIconColor: #7e74f1;
+    --primaryIconColorHover: #5d51e8;
+    --sectionPadding: 6rem 0;
+    --itemBorderRadius: 0.7rem;
+
+    
+  }  
+
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+}
+
+body {
+    font-family:"Roboto", sans-serif;
+}
+
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6, 
+ strong {
+   color: var(--primaryTexrcolor);
+} 
+/* 1rem sama dengan 16px */
+/* 1.9rem sama dengan 30.4px */
+p {
+     font-size: 1rem; 
+    line-height: 1.9rem;
+} 
+
+p, 
+span, 
+label, 
+input, 
+textarea, 
+li {
+    color: var(--seCondaryTextColor);
+}
+
+a {
+    text-decoration: none;
+} 
+
+.main-container {
+     width: 1200px; 
+     margin: 0 auto;  
+}
+
+@media  screen and (max-width: 1200px) {
+    .main-container {
+        width: 90%;
+    }
+}
+/* Buttons */
+.btn {
+    padding: 1rem 1.5rem;
+     background: white;
+    border: 1.5px solid var(--borderColor); 
+    cursor: pointer;
+    transition: .2s ease-in-out;
+}
+
+/* box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px; */
+
+.btn:hover {
+    opacity: 0.7;
+    transform: scale(0.85);
+    box-shadow: 10px 10px 20px #babecc, -10px -10px 20px #ffffff;
+}
+/* Titles */
+.section-title {
+    margin: 1rem 0 4rem;
+    font-size: 2rem;
+}
+
+.pre-title {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: var(--seCondaryTextColor);
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 0.9rem;
+}
+
+.pre-title::before {
+    content: "";
+    width: 30px;
+    height: 1px;
+     background: var(--lineColor);
+    position: absolute;
+    display: block;
+    left: 0;
+    top: 50%;
+}
+/* Layout */
+/* ini selesai */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+/* Logo dan navigasi menu */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+nav ul {
+     list-style: none; 
+    display: flex;
+    gap: 3rem;
+} 
+/* logo */
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.logo a  {
+    color: var(--primaryTextcolor);
+} 
+/* memodiv ini bisa di hapus semua */
+.logo img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transform: translateX(50px); /* Geser 50 piksel ke kanan */
+    transition: transform 0.3s ease; /* Efek transisi */
+}
+
+
+/* navigasi menu */
+nav ul li {
+    display: flex; 
+    align-items: center; 
+} 
+
+nav ul li a {
+    color: var(--primaryIconColor);
+}
+/* ini bisa di hapus semua */
+nav ul li a:hover {
+    color: #7d7d7d;
+}
+
+ /* Hamburger Menu  */
+ .burger div {
+  width: 25px;
+  height: 2px;
+  background-color: #000;
+  margin: 7px;
+  transition: all 0.3s;
+  z-index: 99;
+ }
+
+ .burger {
+    display: none;
+    z-index: 99;
+    position: fixed;
+    top: 33px;
+    right: 35px;;
+ }
+/* disini ada penambahan css transition dan transform */
+ /* Hero Section */
+#hero {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    transition: transform 0.5s ease;
+    transform: translateY(-200px);
+}
+
+.hero-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+.hero-name span {
+    color: var(--primaryIconColor);
+}
+/* ini ada penambahan max-width kebawah */
+ /* width: 90%; */
+.hero-right img {
+   max-width: 100%;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+/* ini ada penambahan css display,flex-direction,align-items */
+.hero-right {
+    display: flex;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+/* bagian service */
+/* disini ada penambahan css transition dan transform */
+#Services {
+    background-color: var(--secondaryBackgroundColor);
+    padding: var(--sectionPadding);
+    transition: transform 0.5s ease;
+    transform: translateY(-200px);
+} 
+
+.services .pre-title {
+    margin: 0 auto;
+}
+
+.services-title {
+    text-align: center;
+}
+
+.Services {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: var(--primaryBackgroundColor);
+    border-radius: var(--itemBorderRadius);
+}
+
+.Service h4 {
+    margin: 1.5rem 0;
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.Service-icon {
+    background: var(--thirdBackgroundColor) ;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.Service-icon svg {
+    fill: var(--primaryIconColor);
+}
+
+.Service-icon {
+    background: var(--thirdBackgroundColor);
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+.Service-icon svg {
+    fill: var(--primaryIconColor);
+}
+/* Portofolio Section */
+/* disini ada penambahan css transition dan transform */
+#portofolios {
+    padding: var(--sectionPadding);
+    transition: transform 0.5s ease;
+    transform: translateY(-200px);
+}
+
+.portofolios {
+    border-radius: var(--itemBorderRadius);
+    overflow: hidden;
+    border: 1px solid var(--borderColor);
+}
+
+.portofolio-cover {
+    height: 250px;
+}
+
+.portofolio img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.portofolio-info {
+    padding: 2rem 1.5rem;
+}
+
+.portofolio-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.portofolio h4 {
+    font-weight: 500;
+    font-size: 1.05rem;
+}
+
+.portofolio-title a svg:hover {
+    fill: var(--primaryIconColor);
+}
+
+.portofolio-title a svg {
+    transition: .2s ease-in-out;
+}
+
+.portofolio-tags {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.portofolio-tags div {
+    font-size: 0.9rem;
+    border: 1px solid var(--borderColor);
+    padding: 0.4rem 1rem;
+    color: var(--seCondaryTextColor);
+}
+
+/* Skills Dan Education */
+/* disini ada penambahan css transition dan transform */
+#skills {
+    padding: var(--sectionPadding);
+    background: var(--secondaryBackgroundColor);
+    transition: transform 0.5s ease;
+    transform: translateY(-200px);
+   
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.education {
+    display: flex;
+    gap: 1rem;
+}
+
+.education .line{
+    padding: 0 0.7rem;
+}
+
+.education .line div {
+  width: 2px;
+  height: 100%;
+  background: var(--borderColor);
+  position: relative;
+}
+
+ .education-info p { 
+  margin: 0.6rem 0 1.4rem;
+}
+
+.education-years {
+    margin-bottom: 3rem;
+}
+
+/* The dot on the line */
+.education .line div::before {
+  content: "";
+  width: 15px;
+  height: 15px;
+  background: var(--borderColor);
+  border-radius: 50% ;
+  position: absolute;
+  left: -6px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.skills-right ul {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+/* Contact Section */
+/* disini ada penambahan css transition dan transform */
+#contact {
+    padding: var(--sectionPadding);
+    transition: transform 0.5s ease;
+    transform: translateY(-200px);
+   
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto" sans-serif;
+    background: var(--secondaryBackgroundColor);
+    border: 1px solid var(--borderColor);
+    border-radius: 3px;
+    resize: none;
+} 
+
+.contact-form input::placeholder,
+ .contact-form textarea::placeholder {
+    color: #9d9fa1;
+}
+
+.contact-form input:focus,
+ .contact-form textarea:focus {
+    outline: none;
+    border: 1px solid #7d7d7d;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: var(--primaryIconColor);
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: var(--primaryIconColorHover);
+}
+
+.contact-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.contact-item-icon {
+    background: var(--thirdBackgroundColor);
+    width: 53px;
+    height: 53px;
+    border-radius: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-item-icon svg {
+    fill: var(--primaryIconColor);
+}
+
+.contact-item-detail h4 {
+   margin-bottom: 0.6rem;
+}
+/*disini ada penambahan css transition dan transform */
+/* 4rem , */
+  footer {
+    padding: 15rem 0;
+    background: var(--secondaryBackgroundColor);
+    text-align: center;
+    transition: transform 0.5s ease;
+    transform: translateY(-200px);
+}
+
+  .footer-icons {
+    margin-bottom: 1rem;
+ }
+
+  /* ini membuat jarak kesambing */
+  .footer-icons a {
+    margin: 0 0.5rem;
+  }
+
+  .footer-icons svg {
+    fill: #3e3f40;
+  }
+
+  .footer-icons a:hover svg {
+    fill: #000;
+  }
+
+
+   @media screen and (max-width: 1000px) {
+    p {
+        font-size: 0.9rem;
+        line-height: 1.8;
+    }
+
+    .grid-3 {
+        gap: 1rem;
+    }
+
+    .skills-right ul li {
+      font-size: 0.9rem;
+    }
+  }
+
+@media screen and (max-width: 825px) {
+    /* Burger */
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .toggle-burger .line-1 {
+        transform: rotate(-45deg) translate(-5px, 7px);
+    }
+
+    .toggle-burger .line-2 {
+        opacity: 0;
+    }
+
+    .toggle-burger .line-3 {
+        transform: rotate(45deg) translate(-5px, 7px);
+    }
+
+/* Navigasi */
+    nav { 
+        position: fixed;
+        width: 50%;
+        right: 0;
+        top: 0;
+        height: 100vh;
+        flex-direction: column;
+        background: var(--primaryBackgroundColor);
+        border-left: 1px solid var(--borderColor);
+        z-index: 9;
+        transform: translateX(100%);
+        transition: 0.2s ease-in-out;
+    }
+
+    nav ul {
+        height: 100vh;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .nav-active {
+        transform: translateX(0);
+    }
+  
+
+/* end of navigasi */
+:root {
+    --sectionPadding: 4rem 0;
+}
+
+/* titles */
+.section-title {
+    font-size: 1.6rem;
+    margin: 0.6rem 0 2.5rem;
+}
+
+.pre-title {
+    font-size: 0.8rem;
+}
+/* hero section */
+#hero {
+    grid-template-columns: 1fr;
+    height: fit-content;
+
+}
+
+.hero-right {
+    order: -1;
+}
+
+.hero-right img {
+    width: 70%;
+}
+
+.hero-left {
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.hero-left .pre-title {
+    margin: 0 auto;
+}
+
+.hero-name {
+    font-size: 2.3rem;
+    margin-bottom: 0.5rem;
+}
+
+/* skills section */
+.skills-grid {
+    gap: 1rem;
+}
+
+
+/* footer */
+footer {
+    padding: 2rem 0;
+}
+}
+/* disini ada penambahan css flex-direction*/
+  @media screen and (max-width: 640px) {
+/* titles */
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .pre-title {
+    font-size: 0.7rem;
+  }
+/*bisa di hapus  */
+  .hero-right {
+    flex-direction: column;
+    transform: translateY(170px); /* Geser 50 piksel ke bawah */
+    transition: transform 0.3s ease; /* Efek transisi */
+  }
+
+   /* bisa di hapus */
+  #hero .hero-left {
+    transform: translateY(170px); /* Geser 50 piksel ke bawah */
+    transition: transform 0.3s ease; /* Efek transisi */
+  }
+/* ini  bisa di hapus */
+  #Services  {
+    transform: translateY(0.4px); /* Geser 50 piksel ke bawah */
+    transition: transform 0.3s ease; /* Efek transisi */
+  }
+/* ini bisa di hapus */
+  #portofolios {
+    transform: translateY(0.4px); /* Geser 50 piksel ke bawah */
+    transition: transform 0.3s ease; /* Efek transisi */
+  }
+  /* ini bisa di hapus */
+ #skills {
+    transform: translateY(0.4px); /* Geser 50 piksel ke bawah */
+    transition: transform 0.3s ease; /* Efek transisi */
+ }
+/* ini bisa di hapus */
+ #contact {
+    transform: translateY(0.4px); /* Geser 50 piksel ke bawah */
+    transition: transform 0.3s ease; /* Efek transisi */ 
+ }
+
+/* ini bisa di hapus */
+  .footer-icons {
+    transform: translateY(10px); /* Geser 50 piksel ke bawah */
+    transition: transform 0.3s ease; /* Efek transisi */ 
+  }
+
+}
+
+  
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+  
