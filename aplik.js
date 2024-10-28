@@ -21,6 +21,21 @@ window.onbeforeunload = () => {
         form.reset();
     }
 };
+
+const z = document.getElementById('bodi');
+// const x = document.getElementsByTagName('body')[0];
+z.addEventListener('click', function () {
+  document.body.classList.toggle('belajar');
+})
+
+
+
+
+
+
+
+
+
 // footer 1
 // Animasi scroll ke atas
 // function scrollToTop() {

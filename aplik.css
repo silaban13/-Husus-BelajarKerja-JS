@@ -118,6 +118,7 @@ a {
 }
 
 /* Logo dan navigasi menu */
+/* ini saya tambahkan */
 .nav {
     display: flex;
     justify-content: space-between;
@@ -173,6 +174,14 @@ nav ul li a:hover {
   transition: all 0.3s;
   z-index: 99;
  }
+/* saya menambahkan ini */
+   #bodi .be {
+    cursor: pointer;
+}
+
+#bodi .be:hover {
+    color: red;
+}
 
  .burger {
     display: none;
@@ -328,6 +337,11 @@ nav ul li a:hover {
     border: 1px solid var(--borderColor);
     padding: 0.4rem 1rem;
     color: var(--seCondaryTextColor);
+}
+
+/* ini saya sendiri yang membuat dari JavaSript */
+.belajar {
+    background-color: rgb(56, 44, 44);
 }
 
 /* Skills Dan Education */
